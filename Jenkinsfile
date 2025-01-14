@@ -55,7 +55,11 @@ pipeline {
             }
         }
       
-       
+        stage('Build Approval') {
+            steps {
+                input "Build Image and Deploy?"
+          }
+        }
 
         stage('Build App Image') {
           steps {
